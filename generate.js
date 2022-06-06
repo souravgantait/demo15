@@ -378,26 +378,27 @@ function displayCalc(container, type, params) {
         var medInfoTableDiv = document.createElement("div");
         medInfoTableDiv.setAttribute("class", "row");
         container.appendChild(medInfoTableDiv);
-        var medInfoHeading = document.createElement("h4");
   
-        medInfoHeading.setAttribute(
-          "style",
-          "padding-left:30px; color: black;"
-        );
+  
+        var calcDiv = document.createElement("div");
+        medInfoTableDiv.appendChild(calcDiv);
+        var medInfoHeading = document.createElement("h2");
+  
+ 
         medInfoHeading.textContent = "Calclator Name: " + type;
-        medInfoTableDiv.appendChild(medInfoHeading);
+        calcDiv.appendChild(medInfoHeading);
         var medInfoHeading3 = document.createElement("h3");
         medInfoHeading3.textContent = "Formula: " + paramList.join("");
 
-        medInfoTableDiv.appendChild(medInfoHeading3);
+        calcDiv.appendChild(medInfoHeading3);
 
-        var resultH1 = document.createElement("h1");
+        var resultH1 = document.createElement("h3");
         resultH1.textContent = "Age= 35, AST=40, ALT=32, Platelet=300";
-        medInfoTableDiv.appendChild(resultH1);
+        calcDiv.appendChild(resultH1);
 
-        var resultH3 = document.createElement("h3");
+        var resultH3 = document.createElement("h2");
         resultH3.textContent = "Result= " + "0.82 points";  
-        medInfoTableDiv.appendChild(resultH3);      
+        calcDiv.appendChild(resultH3);      
         
         container.appendChild(medInfoTableDiv);
   }
